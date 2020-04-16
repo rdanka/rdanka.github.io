@@ -13,7 +13,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $comment = $_POST['comment'] . "\r\n\r\n-- \r\n$name";
 $datetime = date("Y-m-d H:i:s");
-$your_email = 'FILL IN YOUR EMAIL';
+$your_email = 'robert.danka64@gmail.com';
 $subject = 'Comment from HTML-form: ' . substr($comment, 0, 15) . '...';
 }
 if( mail ($your_email, $subject, $comment, "From: $email")){
