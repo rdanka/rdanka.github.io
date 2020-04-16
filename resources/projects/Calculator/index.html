@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <div class="calc">
+    <div class="calc__screen">
+      <p class="calc__screen--previous"></p>
+      <p class="calc__screen--current"></p>
+    </div>
+    <div class="calc__buttons">
+      <button id='add' onclick="add();">+</button>
+      <button id='sub' onclick="sub()">-</button>
+      <button id='multiply' onclick="multiply()">*</button>
+      <button id='divide' onclick="divide()">/</button>
+      <button onclick="writeResult('7')">7</button>
+      <button onclick="writeResult('8')">8</button>
+      <button onclick="writeResult('9')">9</button>
+      <button onclick="calculateResult();" id="run">=</button>
+      <button onclick="writeResult('4')">4</button>
+      <button onclick="writeResult('5')">5</button>
+      <button onclick="writeResult('6')">6</button>
+      <button onclick="writeResult('1')">1</button>
+      <button onclick="writeResult('2')">2</button>
+      <button onclick="writeResult('3')">3</button>
+      <button onclick="writeResult('0')">0</button>
+      <button onclick="writeResult('.')">.</button>
+      <button onclick="clearAll()">C</button>
+    </div>
+  </div>
+</body>
+
+</html>

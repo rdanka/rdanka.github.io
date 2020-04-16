@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="container">
+
+        <div class="option onHover" id="ROCK" onClick="startGame('ROCK')">
+            <svg class="icon">
+                <use xlink:href="SVG/sprite.svg#icon-hand-grab-o"></use>
+            </svg>
+
+        </div>
+        <div class="option onHover" id="PAPER" onClick="startGame('PAPER')">
+            <svg class="icon">
+                <use xlink:href="SVG/sprite.svg#icon-hand-paper-o"></use>
+            </svg>
+
+        </div>
+        <div class="option onHover" id="SCISSORS" onClick="startGame('SCISSORS')">
+            <svg class="icon">
+                <use xlink:href="SVG/sprite.svg#icon-hand-scissors-o"></use>
+            </svg>
+
+        </div>
+        <div class="statusText">vs</div>
+        <div class="computer">
+            <div id="counter" class="animated">
+                <ul class="digits digits-first luckie">
+                    <li>
+                        <svg class="icon">
+                            <use xlink:href="SVG/sprite.svg#icon-hand-grab-o"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="icon">
+                            <use xlink:href="SVG/sprite.svg#icon-hand-paper-o"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="icon">
+                            <use xlink:href="SVG/sprite.svg#icon-hand-scissors-o"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="playAgainButton" onclick="restartGame()">Play Again!</div>
+    </div>
+
+</body>
+
+</html>

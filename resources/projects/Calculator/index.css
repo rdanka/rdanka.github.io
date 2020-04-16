@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+
+.calc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calc__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-weight: 700;
+
+}
+
+button {
+  border: 0.1px solid #444;
+  background-color: #dad8d8;
+  padding: 1rem;
+  height: 10rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+
+}
+
+button:active {
+  transform: translateY(.5px);
+}
+
+#run {
+  grid-column: 4/5;
+  grid-row: 2/6;
+  height: auto;
+  background-color: #DF9271;
+}
+
+
+.calc__screen {
+  background-color: #444;
+  padding: 3rem;
+  font-size: 3rem;
+  color: #eee;
+  text-align: right;
+  height: 13rem;
+}
+
+.calc__screen--previous {
+  color: #808080;
+  font-size: 1.5rem;
+}
+
+/*const output = document.querySelector('.calc__screen');
+let result;
+let FirstNum;
+let SecondNum;
+let adding = false;
+let input = [];
+
+function calculateResult() {
+
+  output.innerHTML = result;
+}
+
+function writeResult(pressedBtn) {
+  output.innerHTML += pressedBtn;
+}
+
+function add() {
+  num = null;
+}
+
+
+
+function clearAll() {
+  output.innerHTML = "";
+  input = [];
+}
+
+document.body.addEventListener('keydown', (evt) => {
+  const key = evt.key;
+  if (key === 'Enter') {
+      calculateResult();
+  } else {
+      switch (key) {
+          case '1':
+              num += key;
+              break;
+          case '2':
+              num += key;
+              break;
+          case '3':
+              num += key;
+              break;
+          case '4':
+              num += key;
+              break;
+          case '5':
+              num += key;
+              break;
+          case '6':
+              num += key;
+              break;
+          case '7':
+              num += key;
+              break;
+          case '8':
+              num += key;
+              break;
+          case '9':
+              num += key;
+              break;
+          case '0':
+              num += key;
+              break;
+          case '.':
+              num += key;
+              break;
+          case ',':
+              num += '.';
+              break;
+          case '+':
+              FirstNum = num;
+              num = null;
+              adding = true;
+              output.innerHTML = "";
+              break;
+          case '-':
+              input.push(key);
+              break;
+          case '*':
+              input.push(key);
+              break;
+          case '/':
+              input.push(key);
+              break;
+
+      }
+  }
+});*/

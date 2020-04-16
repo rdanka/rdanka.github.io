@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #2D3E50;
+    color: #1EB698;
+}
+
+
+:root {
+    --top: 0;
+    --mid: -20rem;
+    --bottom: -42rem;
+    --final: -20rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.option {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 10rem;
+    width: 200px;
+    display: inline-block;
+    border: 1rem solid #1EB698;
+    text-align: center;
+
+}
+
+.playAgainButton {
+    border: 1rem solid #1EB698;
+    padding: 2rem 4rem;
+    width: 50%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    grid-row: 3/4;
+    grid-column: 2/3;
+    margin: 5rem auto;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.onHover {
+    cursor: pointer;
+}
+
+.onHover:hover .icon {
+    animation: floatingIcons .5s infinite;
+}
+
+.icon {
+    height: 20rem;
+    width: 20rem;
+    display: block;
+    fill: #1EB698;
+    margin-bottom: 1rem;
+}
+
+.statusText {
+    font-size: 10rem;
+    font-weight: 700;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+.computer {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 10rem;
+    display: inline-block;
+    border: 1rem solid #1EB698;
+    height: 21rem;
+    width: 20rem;
+    grid-row: 1/2;
+    grid-column: 3/4;
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 5rem 0 10rem 0;
+    font-size: 5rem;
+}
+
+@media only screen and (max-width:1400px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+
+
+@keyframes floatingIcons {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+#counter {
+    height: 21rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+.digits {
+    float: left;
+    list-style-type: none;
+    font-size: 21rem;
+    line-height: 21rem;
+}
+
+.digits-first {
+    margin-top: 0rem;
+}
+
+.digits-second {
+    margin-top: 20rem;
+}
+
+.digits-third {
+    margin-top: -40rem;
+}
+
+.digits {
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+}
+
+.luckie {
+    animation-name: luckie;
+}
+
+/* Animations */
+@keyframes luckie {
+    0% {
+        margin-top: var(--top);
+    }
+
+    12.5% {
+        margin-top: var(--bottom);
+    }
+
+    25% {
+        margin-top: var(--top);
+    }
+
+    50% {
+        margin-top: var(--bottom);
+    }
+
+    62.5% {
+        margin-top: var(--top);
+    }
+
+    75% {
+        margin-top: var(--bottom);
+    }
+
+    100% {
+        margin-top: var(--final);
+        /*1st 0rem 2nd -20rem 3rd -42rem*/
+    }
+}
