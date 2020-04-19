@@ -15,11 +15,9 @@ let start = {
     y: 0
 };
 
-let gridWidth = 70;
+let gridWidth = (window.innerWidth / 20) - 10;
 let gridHeight = 35;
-let grid = [
-    []
-];
+let grid = [];
 
 for (let i = 0; i < gridHeight; i++) {
     grid[i] = [];
