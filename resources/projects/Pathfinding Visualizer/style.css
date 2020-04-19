@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dad6d6;
+
+}
+
+.nav {
+    background-color: #202020;
+    height: 5vw;
+}
+
+.grid {
+    margin: auto;
+    display: inline-block;
+    width: auto;
+}
+
+.element {
+    border: 1px solid #0C3547;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    transition: all .2s;
+}
+
+.element::before {
+    content: " ";
+    transition: all 255ms ease-in;
+    -moz-transition: all 255ms ease-in;
+    -webkit-transition: all 255ms ease-in;
+    transform: scale3d(0, 0, 0);
+    -webkit-transform: scale3d(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+}
+
+
+
+.icon {
+    height: 21px;
+    width: 21px;
+    fill: #C70039;
+}
+
+.line {
+    height: 21px;
+}
+
+.placeStart {
+    background-color: green;
+}
+
+.placeGoal {
+    background-color: red;
+}
+
+.wall {
+    background-color: #0C3547;
+}
+
+.placeWall {
+    background-color: #0C3547;
+    transform: scale(1);
+}
+
+.visited {
+    background-color: aqua !important;
+}
+
+.findPath {
+    background-color: #20639B;
+}
+
+.path {
+    background-color: deeppink !important;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+select {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0C3547;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+select:active,
+select:focus {
+    outline: none;
+    border-bottom: 0px;
+}
+
+option {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0C3547;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
