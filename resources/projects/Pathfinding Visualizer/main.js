@@ -2,8 +2,7 @@
 
  let newLocation;
 
- // Start location will be in the following format:
- // [yPos, xPos]
+ // Start: [yPos, xPos]
  let findShortestPath = function (startCoordinates, grid) {
      let yPos = startCoordinates[0];
      let xPos = startCoordinates[1];
@@ -17,17 +16,13 @@
          status: 'Start'
      };
 
-     // Initialize the queue with the start location already inside
      let queue = [location];
 
-     // Loop through the grid searching for the goal
 
      let loop = setInterval(() => {
          // Take the first location off the queue
          let currentLocation = queue.shift();
 
-
-         // Explore Up
          newLocation = exploreInDirection(currentLocation, 'Up', grid);
          if (newLocation.status === 'Goal') {
              clearInterval(loop);
@@ -37,7 +32,7 @@
              queue.push(newLocation);
          }
 
-         // Explore Right
+
          newLocation = exploreInDirection(currentLocation, 'Right', grid);
          if (newLocation.status === 'Goal') {
              clearInterval(loop);
@@ -47,7 +42,7 @@
              queue.push(newLocation);
          }
 
-         // Explore Down
+
          newLocation = exploreInDirection(currentLocation, 'Down', grid);
          if (newLocation.status === 'Goal') {
              clearInterval(loop);
@@ -57,7 +52,7 @@
              queue.push(newLocation);
          }
 
-         // Explore Left
+
          newLocation = exploreInDirection(currentLocation, 'Left', grid);
          if (newLocation.status === 'Goal') {
              clearInterval(loop);
@@ -72,10 +67,7 @@
 
  };
 
- // This function will check a location's status
- // (a location is "valid" if it is on the grid, is not an "obstacle",
- // and has not yet been visited by our algorithm)
- // Returns "Valid", "Invalid", "Blocked", or "Goal"
+
  let locationStatus = function (location, grid) {
      let dft = location.yPos;
      let dfl = location.xPos;
@@ -98,8 +90,7 @@
  };
 
 
- // Explores the grid from the given location in the given
- // direction
+
  let exploreInDirection = function (currentLocation, direction, grid) {
      let newPath = currentLocation.path.slice();
      newPath.push(direction);
@@ -137,7 +128,7 @@
      return newLocation;
  };
  pathFindingButton.addEventListener('click', () => {
-     console.log(findShortestPath([start.y, start.x], grid));
+     findShortestPath([start.y, start.x], grid);
  });
 
  function draw(startingPos, grid) {
@@ -175,6 +166,3 @@
      }, 100);
 
  }
- // OK. We have the functions we need--let's run them to get our shortest path!
-
- //console.log(findShortestPath([start.y, start.x], grid)); ,

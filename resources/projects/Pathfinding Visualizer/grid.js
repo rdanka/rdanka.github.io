@@ -10,13 +10,15 @@ let putGoal = false;
 let putWall = false;
 let mouseDown = false;
 
+
+
 let start = {
     x: 0,
     y: 0
 };
 
-let gridWidth = (window.innerWidth / 20) - 10;
-let gridHeight = 35;
+let gridWidth = parseInt(window.getComputedStyle(gridContainer).getPropertyValue('width'), 10) / 22.5;
+let gridHeight = (window.innerHeight / 20) - 8;
 let grid = [];
 
 for (let i = 0; i < gridHeight; i++) {
@@ -99,6 +101,7 @@ function putElement(yPos, xPos) {
 placeGoalButton.addEventListener('click', () => {
     document.body.style.cursor = "url('SVG/targetMouse.svg'), auto";
     putGoal = true;
+    placeGoalButton.disabled = 'true';
 });
 placeWallButton.addEventListener('click', () => {
     putWall = true;
@@ -106,6 +109,7 @@ placeWallButton.addEventListener('click', () => {
 placeStartButton.addEventListener('click', () => {
     document.body.style.cursor = "url('SVG/chevron-rightMouse.svg'), auto";
     putStart = true;
+    placeStartButton.disabled = 'true';
 });
 
 document.body.addEventListener('click', () => {

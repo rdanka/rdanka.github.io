@@ -10,13 +10,17 @@ body {
 
 .nav {
     background-color: #202020;
-    height: 5vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
     margin: auto;
     display: inline-block;
-    width: auto;
+    width: 100%;
+
 }
 
 .element {
@@ -88,6 +92,7 @@ button {
     font-weight: 700;
     color: #fff;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 select {
