@@ -405,6 +405,7 @@ input:focus:invalid {
   margin-bottom: 0;
 }
 
+
 @media only screen and (max-width: 1000px) {
   html {
     font-size: 50%;
